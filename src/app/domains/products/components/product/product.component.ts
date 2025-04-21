@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -9,7 +9,18 @@ import { CommonModule } from '@angular/common';
   styleUrl: './product.component.css'
 })
 export class ProductComponent {
-  @Input({required: true}) img: string = '';
-  @Input({required: true}) price: number = 0;
-  @Input({required: true}) title: string = '';
+  @Input() img: string = '';
+  @Input() price: number = 0;
+  @Input() title: string = '';
+
+  @Output() addToCart = new EventEmitter();
+
+  addToCartHandler() {
+    console.log('click from child');
+    this.addToCart.emit({
+      title: this.title,
+      price: this.price,
+      img: this.img
+    });
+  }
 }
