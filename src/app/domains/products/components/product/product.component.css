@@ -1,0 +1,33 @@
+:host {
+    display: block;
+}
+
+div {
+    border: 1px solid #e2e8f0;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    transition: transform 0.2s;
+}
+
+div:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+img {
+    width: 100%;
+    height: auto;
+    border-radius: 0.25rem;
+    margin-bottom: 1rem;
+}
+
+h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+p {
+    color: #4a5568;
+    font-weight: 500;
+}
